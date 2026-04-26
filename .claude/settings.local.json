@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mktemp *)",
+      "Bash(git clone *)",
+      "Bash(cp *)",
+      "Bash(gh api *)",
+      "PowerShell(gh api *)",
+      "Bash(curl -sI https://www.liorentechnologies.com)",
+      "Bash(curl -s https://www.liorentechnologies.com)",
+      "Bash(command -v gh)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "PowerShell(winget install *)",
+      "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" --version)",
+      "PowerShell(Get-Command *)",
+      "Bash(git -C /c/Users/casey/Downloads/website status)",
+      "Bash(git -C /c/Users/casey/Downloads/website remote -v)",
+      "Bash(git -C /c/Users/casey/Downloads/website log --oneline -5)",
+      "Bash(gh auth *)"
+    ]
+  }
+}

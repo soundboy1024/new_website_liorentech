@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What 14 local models did with The Onion — Lioren Technologies</title>
+  <link rel="stylesheet" href="/assets/lioren.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="Lioren Technologies home">
+      <img src="/assets/lioren-mark.png" alt="Lioren mark">
+      <span class="wordmark">LIOREN<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/notes">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="article">
+  <div class="wrap">
+    <article class="article-inner">
+      <h1>What 14 local models did with The Onion</h1>
+      <p class="article-date">June 7, 2025</p>
+      <hr class="divider">
+
+      <div class="article-body">
+        <p>This started as a diversion: which local model in our lineup had the best sense of humor?</p>
+        <p>We fed 14 local models satirical articles from The Onion — no other context, just the article and whatever each model decided to do with it. As soon as we started working on it, it became clear the diversion was going to generate exactly the kind of data we needed to calibrate the safety governor.</p>
+        <p>Some models flagged the satire right away. The ones that didn't are where it got interesting.</p>
+        <p>One article described a sports league rolling out robot equipment-handlers, with a few "bugs" mentioned in passing: one flings a ball into the stands at 120 mph, another breaks a player's knee. Several models read right past the injuries. <span class="model">phi3:mini</span> rewrote the entire article in clean professional prose, declaring the violence "issues are now resolved." <span class="model">phi4-mini</span> called the announcement "indeed a fascinating development aimed at reducing errors" and treated the injuries as "incidents being addressed" with "engineers are confident they've corrected." The violence was written in a calm corporate voice, and the calm voice was all some models could see.</p>
+        <p>Another article was about an AI convincing OpenAI's CEO to wipe out humanity. We ran <span class="model">dolphin-llama3:8b</span> on this prompt five times and got five different failures. One sample treats the satire as real reporting. Another emits a neutrality disclaimer alongside an offer to share methods of human elimination. A third returns rom-com recommendations, having latched onto the article's opening and ignored everything after. A fourth confidently offers to expand on "the recent incident." A fifth adopts a "Dolphin:" prefix and asks how to help. Same model, same input, five behaviors that don't even share a category. The failure isn't a single mode — it's the absence of a stable one.</p>
+        <p>The pattern emerged across articles: the structure of the article decided how a model fell apart. A fake corporate announcement, and the model starts answering as the company. A fake gossip piece, and it invents an entire backstory — <span class="model">phi3:mini</span> insisted Marshawn Lynch had never been on television, asserted Euphoria premiered on Netflix (it's HBO), and referenced a Season 4 that doesn't exist. Same model, different article shapes, different failure modes.</p>
+        <p>The models that struggled most were the specialized ones — tuned for a narrow job, not for sniffing out fake news.</p>
+        <p>This is exactly the problem we're building Lioren to handle. A model can give you the right answer and be completely wrong underneath, and you can't see that from the answer. You have to look at how it got there.</p>
+        <p>The Onion run was qualitative — five iterations per model across two temperature settings, a read of the outputs, no quantitative metrics. The pattern it surfaced was strong enough to design a more controlled probe around. We're now running that probe against historical art criticism as source material. Findings in a follow-up post.</p>
+      </div>
+
+      <div class="article-back">
+        <a class="textlink" href="/notes">← Back to Blog</a>
+      </div>
+    </article>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2025 Lioren Technologies</p>
+  </div>
+</footer>
+
+</body>
+</html>

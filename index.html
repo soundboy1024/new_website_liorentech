@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lioren Technologies — Deterministic governors for real-time AI</title>
+  <link rel="stylesheet" href="assets/lioren.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="Lioren Technologies home">
+      <img src="assets/lioren-mark.png" alt="Lioren mark">
+      <span class="wordmark">LIOREN<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/notes">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="assets/lioren-mark.png" alt="" aria-hidden="true"
+         style="position:absolute; right:-6%; top:50%; transform:translateY(-50%);
+                height:118%; width:auto; opacity:0.24;
+                pointer-events:none; z-index:0;">
+    <div class="wrap">
+      <div class="hero-inner">
+        <h1>Deterministic governors for real-time AI.</h1>
+        <p class="sub">AEC measures token-level entropy as language models generate, and brakes them at the decision points where output most often goes wrong. Model-agnostic. In-stream. No post-hoc filtering.</p>
+        <a class="btn" href="#contact">Request early access</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE'RE BUILDING -->
+  <section class="section">
+    <div class="wrap">
+      <p class="label">What we're building</p>
+      <div class="prose">
+        <p>Lioren is building AEC — AI Entropy Control — a deterministic governor for language models. AEC detects the conditions that produce hallucinations, before they reach output.</p>
+        <p>AEC is deterministic: the same input and governor state produce the same response, making its decisions reproducible and auditable rather than probabilistic. It runs in-stream during generation, not as a post-hoc filter on completed output, so the hallucination is caught before it is emitted.</p>
+        <p>AEC is not a wrapper, prompt-engineering layer, or retrieval system. It is a separate governance process that reads from the model and intervenes before hallucinated content reaches the user.</p>
+        <p>Designed for self-hosted language model deployments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section">
+    <div class="wrap">
+      <p class="label">How we work</p>
+      <div class="prose">
+        <p>We build governors against measured model behavior, not assumed model behavior.</p>
+        <p>AEC is being designed in response to empirical probing of how language models actually fail. We construct controlled prompts, run them across open-weight models with multiple iterations per prompt, and capture quantitative measurements of where the models hallucinate and how.</p>
+        <p>The current probe focuses on hallucination patterns in completion-style prompts, using historical art criticism as source material. Findings inform AEC's design. They do not yet measure AEC's performance — that comes after the canonical governor is built and tested against the same probes.</p>
+      </div>
+      <a class="textlink" href="/notes" style="margin-top:34px; display:inline-block;">Development notes →</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <p class="label">Contact</p>
+      <p class="contact-intro">Get in touch or request early access.</p>
+      <form class="form" action="https://formspree.io/f/xvznagpw" method="POST">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" placeholder="Your name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="org">Organization</label>
+          <input type="text" id="org" name="Organization" placeholder="Company or institution" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" placeholder="you@organization.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="interest">Interest</label>
+          <select id="interest" name="Interest">
+            <option value="AEC early access">AEC early access</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="What are you working on?"></textarea>
+        </div>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>© 2025 Lioren Technologies</p>
+  </div>
+</footer>
+
+</body>
+</html>
